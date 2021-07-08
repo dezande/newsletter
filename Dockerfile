@@ -29,7 +29,7 @@ RUN apk add --update --no-cache \
 
 RUN gem install bundler -v 2.2.15
 
-WORKDIR /usr/src/app
+WORKDIR /app
 COPY Gemfile* ./
 RUN gem install bundler --conservative
 RUN bundle config build.nokogiri --use-system-libraries
